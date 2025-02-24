@@ -29,7 +29,7 @@ export default function SectionListOfProjects({ posts }) {
           {posts.map((post, index) => (
             <Link
               key={"post-" + index}
-              href={post.slug}
+              href={post.url || "#"}
               className={
                 "group col-span-1 cursor-pointer rounded-3xl border-2 border-dashed border-transparent transition-all hover:border-gray-400/20"
               }

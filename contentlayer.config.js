@@ -8,7 +8,7 @@ import remarkGfm from "remark-gfm"
 const computedFields = {
   slug: {
     type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    resolve: (doc) => `/${doc._raw.sourceFileDir}`,
   },
   slugAsParams: {
     type: "string",
@@ -54,6 +54,10 @@ export const Post = defineDocumentType(() => ({
       type: "list",
       of: { type: "string" },
       required: true,
+    },
+    url: {
+      type: "string",
+      required: false,
     },
   },
   computedFields,
