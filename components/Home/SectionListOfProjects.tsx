@@ -30,6 +30,7 @@ export default function SectionListOfProjects({ posts }) {
             <Link
               key={"post-" + index}
               href={post.url || "#"}
+              target="_blank"
               className={
                 "group col-span-1 cursor-pointer rounded-3xl border-2 border-dashed border-transparent transition-all hover:border-gray-400/20"
               }
