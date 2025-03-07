@@ -10,13 +10,13 @@ export default function SectionBento() {
   return (
     <section
       id="main"
-      className="mx-auto grid max-w-5xl grid-cols-1 gap-4 px-8 md:grid-cols-2 lg:grid-cols-3 lg:px-0"
+      className="mx-auto grid max-w-5xl grid-cols-1 gap-4 px-8 md:grid-cols-1 lg:grid-cols-3 lg:px-0"
     >
-      <a
+      <Link
         target="_blank"
         rel="noreferrer noopener"
         href="https://docs.google.com/document/d/1Jcs_D8QEuQgEcaOj4czl8XG5WzehJYt_VDPXFT7BrJw/view"
-        className="group relative col-span-2 h-96 w-full cursor-pointer overflow-hidden rounded-3xl border-4 border-red-500"
+        className="group relative col-span-1 h-96 w-full cursor-pointer overflow-hidden rounded-3xl border-4 border-red-500 lg:col-span-2"
       >
         <Image
           alt=""
@@ -71,7 +71,7 @@ export default function SectionBento() {
             height={900}
           />
         </div>
-      </a>
+      </Link>
       <Link
         href={"/#stack"}
         className="group relative h-[500px] w-full cursor-pointer overflow-hidden rounded-3xl bg-[#23293C]  md:h-full lg:h-auto "
@@ -149,25 +149,23 @@ export default function SectionBento() {
           </div>
           <CardTopTools />
         </div>
-        <div className="">
-          <Link
-            href={"/#info"}
-            className="group relative flex h-full items-center justify-center overflow-hidden rounded-3xl border-2 border-white bg-slate-800 text-center"
-          >
-            <Image
-              alt=""
-              className="absolute inset-0 h-full w-full object-cover transition-transform ease-out group-hover:scale-110 group-hover:blur-sm"
-              src={
-                "https://res.cloudinary.com/dggxtloo1/image/upload/v1740374309/WhatsApp_Image_2025-02-24_at_01.18.00_vbk2gx.jpg"
-              }
-              width={700}
-              height={900}
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-              <p className="font-bold">About Me</p>
-            </div>
-          </Link>
-        </div>
+        <Link
+          href={"/#info"}
+          className="group relative flex min-h-[200px] items-center justify-center overflow-hidden rounded-3xl border-2 border-white bg-slate-800 text-center"
+        >
+          <Image
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover transition-transform ease-out group-hover:scale-110 group-hover:blur-sm"
+            src={
+              "https://res.cloudinary.com/dggxtloo1/image/upload/v1740374309/WhatsApp_Image_2025-02-24_at_01.18.00_vbk2gx.jpg"
+            }
+            width={700}
+            height={900}
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+            <p className="font-bold">About Me</p>
+          </div>
+        </Link>
       </div>
     </section>
   )

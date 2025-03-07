@@ -123,7 +123,7 @@ export default function AnimatedTitle() {
       <h2
         className={`${barlow.className} z-10 flex max-w-3xl scale-[0.60] flex-col text-center text-8xl font-extrabold md:scale-100`}
       >
-        <span className="animate-fade-up-1 opacity-0">CREATIVE</span>
+        <span className="animate-fade-up-1 opacity-0">FULL STACK</span>
 
         <span className="relative z-10 animate-fade-up-2 bg-black/30 px-4 py-1 opacity-0 backdrop-blur-sm">
           {/* Bordes y decoraciones */}

@@ -32,13 +32,13 @@ export default function SectionListOfProjects({ posts }) {
               href={post.url || "#"}
               target="_blank"
               className={
-                "group col-span-1 cursor-pointer rounded-3xl border-2 border-dashed border-transparent transition-all hover:border-gray-400/20"
+                "group relative col-span-1 cursor-pointer overflow-hidden rounded-3xl border-2 border-dashed border-transparent transition-all hover:border-gray-400/20"
               }
             >
               <article
                 key={post._id}
                 className={
-                  " relative col-span-1 flex cursor-pointer flex-col items-center gap-2 space-y-2 transition-all group-hover:hover:scale-95 "
+                  " relative col-span-1 flex h-full cursor-pointer flex-col items-center gap-2 space-y-2 transition-all group-hover:hover:scale-95 "
                 }
               >
                 <div className="absolute left-4 top-6  hidden gap-1 group-hover:flex">
@@ -57,38 +57,16 @@ export default function SectionListOfProjects({ posts }) {
                     />
                   )}
                 </div>
-                <div className="inset-x-0 bottom-0 w-full bg-gradient-to-t to-transparent ">
-                  {/* <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M21 2.99997C18 2.99997 14 3.99997 14 11L14 19C14 20.25 14.756 21.017 16 21L20 21C21.25 21 22 20.25 22 19.028L22 13C22 11.75 21.25 11 20 11C19 11 19 11 19 9.99997L19 8.99997C19 7.99997 20 6.99997 21 6.99997C22 6.99997 22 6.99197 22 5.96897L22 3.99997C22 2.99997 22 2.99997 21 2.99997Z"
-                      fill="white"
-                      stroke="white"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M9 2.99997C6 2.99997 2 3.99997 2 11L2 19C2 20.25 2.757 21.017 4 21L8 21C9.25 21 10 20.25 10 19.028L10 13C10 11.75 9.25 11 8 11L7.25 11C7.25 8.74997 7 6.99997 10 6.99997L10 3.99997C10 2.99997 10 2.99997 9 2.99997Z"
-                      fill="white"
-                      stroke="white"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg> */}
+                <div className="inset-x-0 bottom-0 flex w-full  flex-1 flex-col  bg-gradient-to-t to-transparent pb-5 ">
                   <h2 className="text-lg font-extrabold text-white md:text-xl">
                     {post.title}
                   </h2>
-                  <h3 className="line-clamp-2 text-sm text-white/50 md:text-base">
+                  <h3 className=" mb-2 text-justify text-sm text-white/50 md:text-base">
                     {post.description}
                   </h3>
 
                   {post.name && (
-                    <p className="mt-2 flex items-center gap-2 truncate">
+                    <p className="absolute right-5 top-5  flex flex-1 items-end justify-end gap-2 truncate ">
                       {post.status &&
                         post.status.map((chip, index) => {
                           return (

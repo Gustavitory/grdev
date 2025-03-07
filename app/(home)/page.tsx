@@ -184,7 +184,7 @@ export default async function IndexPage() {
               <div
                 key={"ite-" + index}
                 className={
-                  "flex w-fit items-center justify-between gap-4 rounded-lg  bg-slate-800 p-4 " +
+                  "flex w-72 items-center justify-between gap-4 rounded-lg bg-slate-800  p-4 lg:w-min " +
                   (!item.title ? "opacity-30" : "")
                 }
               >
